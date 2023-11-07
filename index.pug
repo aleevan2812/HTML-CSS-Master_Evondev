@@ -1,0 +1,33 @@
+mixin tourItem
+  .tour
+    .tour-top
+      img.tour-image(src='./images/martyna-bober-yd1_Tupnls4-unsplash.png', alt='this-is-image')
+      span.tour-price From $40
+    .tour-content
+      h3.tour-title
+        | ThailandsAyutthayaTemplesCruisefromBangkokThailandsAyutthayaTemplesCruisefromBangkokThailandsAyutthayaTemplesCruisefromBangkok
+      .tour-rating
+        .tour-review
+          .tour-star
+            img(src='./images/Star.png', alt='tour-rating')
+          .tour-review-count
+            span 4.8 (12 reviews)
+        span.tour-duration  Duration: 9 hours 
+      a.tour-button(href='.', target='_blank', rel='noopener noreferrer') Tours Price $61
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title HTML CSS Master
+  link(rel='preconnect', href='https://fonts.googleapis.com')
+  link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap', rel='stylesheet')
+  link(rel='stylesheet', href='./app.css')
+.tour-list-container
+  .tour-list
+    +tourItem
+    +tourItem
+    +tourItem
+    +tourItem
+    +tourItem
+    
