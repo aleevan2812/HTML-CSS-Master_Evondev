@@ -1,19 +1,5 @@
-mixin tourItem
-  .tour
-    .tour-top
-      img.tour-image(src='./images/martyna-bober-yd1_Tupnls4-unsplash.png', alt='this-is-image')
-      span.tour-price From $40
-    .tour-content
-      h3.tour-title
-        | ThailandsAyutthayaTemplesCruisefromBangkokThailandsAyutthayaTemplesCruisefromBangkokThailandsAyutthayaTemplesCruisefromBangkok
-      .tour-rating
-        .tour-review
-          .tour-star
-            img(src='./images/Star.png', alt='tour-rating')
-          .tour-review-count
-            span 4.8 (12 reviews)
-        span.tour-duration  Duration: 9 hours 
-      a.tour-button(href='.', target='_blank', rel='noopener noreferrer') Tours Price $61
+include ./pug/mixins.pug
+
 doctype html
 head
   meta(charset='UTF-8')
@@ -25,9 +11,8 @@ head
   link(rel='stylesheet', href='./app.css')
 .tour-list-container
   .tour-list
-    +tourItem
-    +tourItem
-    +tourItem
-    +tourItem
-    +tourItem
+    +tourItem('./images/martyna-bober-yd1_Tupnls4-unsplash.png', 'From $60', 'Thailands Ayutthaya Temples Cruise from Bangkok', 4.8, 11, '12 hours', 60)
+    +tourItem('https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'From $40', 'FLoating Markets Day Trip from Bangkok', 4.8, 15, '9 hours', 60)
+    +tourItem('https://images.unsplash.com/photo-1590910705086-a5f1ffc25fc2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D', 'From $50', 'Bangkok Dinner Cruise on the Chao Phraya River', 4.8, 9, '10 hours', 60)
+    
     
