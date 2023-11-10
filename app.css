@@ -7,11 +7,17 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   background-color: antiquewhite;
-  padding: 40px 0;
+  padding: 40px 24px;
+}
+
+.tour-list-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .tour-list {
-  margin-left: -30px;
+  /* margin-left: -30px; */
   /* margin-left: auto; */
   /* margin-right: auto; */
   display: flex;
@@ -99,11 +105,7 @@ body {
   object-fit: cover;
 }
 
-.tour-list-container {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
+
 
 .tour-top {
   position: relative;
@@ -119,4 +121,38 @@ body {
   background-color: rgb(54, 57, 69, 0.8);
   padding: 5px 16px;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 768.98px) {
+  .tour-list {
+    row-gap: 20px;
+  }
+
+  .tour {
+    width: 100%;
+  }
+
+  .tour-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .tour-button,
+  .tour-rating {
+    font-size: 12px;
+  }
+
+  .tour-content {
+    padding: 17px 17px 9px;
+  }
+
+  .tour-image {
+    height: 211px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .tour {
+    width: calc(50% - 20px);
+  }
 }
