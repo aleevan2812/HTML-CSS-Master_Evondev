@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block; /* để loại bỏ inline để xóa khoảng trống dưới ảnh trong 1 so TH */
+  max-width: 100%; /* chạy theo khung chứa nó */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  background-color: antiquewhite;
+  padding: 40px 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.popular-item {
+  width: calc(25% - 30px);
+  margin-left: 30px;
+  border-radius: 14px;
+  background-color: #fff;
+  box-shadow: 0px 12px 64px 0px rgba(0, 0, 0, 0.06);
+  /* overflow: hidden; */
+}
+
+.popular-image {
+  height: 185px;
+  position: relative;
+}
+
+.popular-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+
+.popular-label {
+  position: absolute;
+  right: 20px;
+  bottom: -11.5px;
+  color: var(--gray-6, #f4f5f6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: var(--primary-primary, #3b71fe);
+  padding: 4px 18px 5px 18px;
+}
+
+.popular-content {
+  padding: 11px 20px;
+}
+
+.popular-time {
+  color: var(--gray-3, #777e90);
+  font-size: 9px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.popular-title {
+  color: var(--gray-2, #353945);
+  /* body/bodi 18 (medium) */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.556%; /* 155.556%  28px*/
+  margin-bottom: 9px;
+}
+
+.popular-review {
+  display: flex;
+  align-items: center;
+  color: var(--Gray-2, #4f4f4f);
+  /* font-family: DM Sans; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 175%; /* 21px */
+  column-gap: 8px;
+}
+
+.popular-overlay {
+  background: linear-gradient(
+    24deg,
+    rgba(4, 4, 4, 0.52) 0.23%,
+    rgba(4, 4, 4, 0) 55.52%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+ /*  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  position: absolute;
+  inset: 0; */
+
+  border-radius: 14px 14px 0 0;
+}
