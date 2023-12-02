@@ -9,6 +9,16 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
 :root {
   --primary-color: #2979ff;
   --black-color: #141416;
@@ -16,15 +26,20 @@ img {
   --gray6: #f4f5f6;
   --gray3: #777e90;
   --gray4f: #4f4f4f;
+
   --primary-font: "Inter", sans-serif;
   --secondary-font: "DM Sans", sans-serif;
+
+  --fz-default: 14px;
 }
 
 body {
   font-family: var(--primary-font);
-  font-weight: 500;
-  background-color: antiquewhite;
-  padding: 40px 24px;
+  font-weight: 400;
+  background-color: white;
+  font-size: var(--fz-default);
+  color: var(--gray3);
+  line-height: 1;
 }
 
 .top-tours {
@@ -33,8 +48,9 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .heading {
@@ -43,6 +59,24 @@ body {
   font-size: 30px;
   margin-bottom: 34px;
   line-height: 1.5;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 9px 40px;
+  border-radius: 100rem;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: calc(36 / 24);
+  width: fit-content;
+  margin: 70px auto;
 }
 
 section {
@@ -275,6 +309,10 @@ section {
 }
 
 /* diamond */
+.diamond {
+  padding: 65px 0;
+  background-color: #fcfcfc;
+}
 .diamond .heading {
   text-align: center;
 }
@@ -329,6 +367,58 @@ section {
   align-items: flex-end;
 }
 
+/* Footer */
+.footer {
+  padding: 70px 0;
+}
+
+.footer-container {
+  max-width: 1130px;
+}
+
+.footer-columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-column:first-child{
+  max-width: 268px;
+}
+
+.footer-heading {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  color: var(--gray2);
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-link {
+  display: block;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.footer-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray2);
+  margin-bottom: 30px;
+}
 @media screen and (max-width: 768.98px) {
   /* .tour-list {
     row-gap: 20px;

@@ -1,5 +1,5 @@
 include ./pug/mixins.pug
-
+//- pug index.pug --watch --pretty
 doctype html
 head
   meta(charset='UTF-8')
@@ -7,45 +7,71 @@ head
   title HTML CSS Master
   link(rel='preconnect', href='https://fonts.googleapis.com')
   link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
-  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap', rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap', rel='stylesheet')
   
   link(href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Inter:wght@500&display=swap" rel="stylesheet")
   link(rel='stylesheet', href='./main.css')
 body  
-  section.top-tours
-    .container
-      h2.heading Top Bangkok Tours
-      .tour-list 
-        +tourItem('./images/martyna-bober-yd1_Tupnls4-unsplash.png', 'From $60', 'Thailands Ayutthaya Temples Cruise from Bangkok', 4.8, 11, '12 hours', 60)
-        +tourItem('https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'From $40', 'FLoating Markets Day Trip from Bangkok', 4.8, 15, '9 hours', 60)
-        +tourItem('https://images.unsplash.com/photo-1590910705086-a5f1ffc25fc2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D', 'From $50', 'Bangkok Dinner Cruise on the Chao Phraya River', 4.8, 9, '10 hours', 60)
-  section.popular
-    .container
-      h2.heading Popular things to do in Bangkok
-      .popular-list 
-        +popularItem()
-        +popularItem()
-        +popularItem()
-        +popularItem()
-        +popularItem()
-  section.gem 
-    .container
-      h2.heading Hidden gems in Bangkok
-      .gem-list 
-        each val in [1,2,3,4,5]
-          .gem-item= n
-            img(src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhdmVsfGVufDB8fDB8fHww", alt="", srcset="")
-  section.diamond   
-    .container  
-      h2.heading Hidden gems in Bangkok
-      .diamond-list 
-        each val in [1,2,3,4]
-          .diamond-item= n
-            .diamond-image
+  header 
+  main 
+    section.top-tours
+      .container
+        h2.heading Top Bangkok Tours
+        .tour-list 
+          +tourItem('./images/martyna-bober-yd1_Tupnls4-unsplash.png', 'From $60', 'Thailands Ayutthaya Temples Cruise from Bangkok', 4.8, 11, '12 hours', 60)
+          +tourItem('https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'From $40', 'FLoating Markets Day Trip from Bangkok', 4.8, 15, '9 hours', 60)
+          +tourItem('https://images.unsplash.com/photo-1590910705086-a5f1ffc25fc2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D', 'From $50', 'Bangkok Dinner Cruise on the Chao Phraya River', 4.8, 9, '10 hours', 60)
+    section.popular
+      .container
+        h2.heading Popular things to do in Bangkok
+        .popular-list 
+          +popularItem()
+          +popularItem()
+          +popularItem()
+          +popularItem()
+          +popularItem()
+    section.gem 
+      .container
+        h2.heading Hidden gems in Bangkok
+        .gem-list 
+          each val in [1,2,3,4,5]
+            .gem-item= n
               img(src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhdmVsfGVufDB8fDB8fHww", alt="", srcset="")
-              .diamond-content
-                h3.diamond-title Bangkok Trip
-
-        
-      
-    
+    section.diamond   
+      .container  
+        h2.heading Hidden gems in Bangkok
+        .diamond-list 
+          each val in [1,2,3,4]
+            .diamond-item= n
+              .diamond-image
+                img(src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhdmVsfGVufDB8fDB8fHww", alt="", srcset="")
+                .diamond-content
+                  h3.diamond-title Bangkok Trip
+    a.button(href="#") Explore All 
+  footer.footer 
+    .container.footer-container 
+      .footer-top
+        .footer-columns 
+          .footer-column
+            a.footer-logo(href="/")
+              img(src="", alt="Airtrav", srcset="./images/logo.png")
+            p.footer-desc Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+          .footer-column
+            h4.footer-heading Services 
+            ul.footer-links  
+              each val in ["Trip Planner", "Tour Planning", "Tour Guide", "Tour Package", "Tour advice"] 
+                li.footer-item  
+                  a.footer-link(href="#")= val  
+          .footer-column
+            h4.footer-heading Services 
+            ul.footer-links  
+              each val in ["Trip Planner", "Tour Planning", "Tour Guide", "Tour Package", "Tour advice"] 
+                li.footer-item  
+                  a.footer-link(href="#")= val  
+          .footer-column
+            h4.footer-heading Services 
+            ul.footer-links  
+              each val in ["Trip Planner", "Tour Planning", "Tour Guide", "Tour Package", "Tour advice"] 
+                li.footer-item  
+                  a.footer-link(href="#")= val  
+      .footer-bottom
